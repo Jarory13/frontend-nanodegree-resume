@@ -19,7 +19,21 @@ var bio = {
 "WordPress", "Project Management", "Excel", "Word"],
 	"welcome": "This is place holder text for a welcome message."
 
-}
+};
+
+var work = {};
+
+work.position = "Freelancer";
+work.employer = "Self";
+work.years = "1";
+work.city = "New York, NY/ Tampa, FL";
+
+var education = {};
+
+education["name"] = "University of South Florida";
+education["years"] = "2009-2014";
+education["city"] ="Tampa, FL"
+
 
 //pass those values into a formattted verion.
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -49,6 +63,11 @@ $("#header").append(formattedlinked);
 $("#header").append(formattedskills);
 $("#header").append(formattedwelcome);
 $("#header").append(formattedlocation);
+
+//Work on the main body 
+$("#main").append(work[position]);
+$("#main").append(education.name);
+
 
 
 

@@ -17,24 +17,135 @@ var bio = {
 	"skills" : ["Web Development", "Android", "Java", "XML", "C++", 
 "C", "C#", "HTML/CSS", "PHP", "JaaScript", "Unity", "Copy Writing", 
 "WordPress", "Project Management", "Excel", "Word"],
-	"welcome": "This is place holder text for a welcome message."
+	"welcome": "From ideas to development, I'm the guy you want on the job."
 
 };
 
-var work = {};
+var work = {
+	"current" : {
+"position" :"Freelancer",
+"employer" : "Self",
+"years" : "1",
+"city" : "New York, NY/ Tampa, FL",
+"description" : "I currently freelance as a web and mobile developer."
+},
+	
+	"previous" :[
+{
+"position" : "Intern",
+"employer" : "Florida Department of health",
+"years" : "0.25",
+"city" : "Tampa, FL",
+"description" : "Working with the DOH, I shadowed the team during epidemiological investigations and monitored potential ebola cases in Florida."
+},
 
-work.position = "Freelancer";
-work.employer = "Self";
-work.years = "1";
-work.city = "New York, NY/ Tampa, FL";
+{
+"position" : "Ethnographer",
+"employer" : "Smart Revenue",
+"years" : "3",
+"city" : "Tampa, FL/ New York, NY",
+"description" : "As an Ethnographer I gathered data on consumers by observing them in client locations. I used survies and interviews to ascertain their purchasing logic and returned that data to our clients."
+},
 
-var education = {};
+{
+"position" : "Data Research Analyst",
+"employer" : "BayForce",
+"years" : "1",
+"city" : "Tampa, FL",
+"description" : "I worked in SalesForce to maintain our client records so that our sales time had the most up to date data."
+},
 
-education["name"] = "University of South Florida";
-education["years"] = "2009-2014";
-education["city"] ="Tampa, FL"
+{
+"position" : "Course Developer",
+"employer" : "You Can Learn Inc.",
+"years" : "1",
+"city" : "Tampa, FL",
+"description" : "I researched and wrote the content for our educaitonal apps. Each assignment required that I do indepth research on subjects ranging from Greek Mythology to the History of Japan. I then wrote the content and quizzes for the app."
+}
+
+	]
+
+}
+
+var education = {
+	"schools" :[
+	{
+"name" : "University of South Florida",
+"startYear" : 2009,
+"endYear" : 2014,
+"city" : "Tampa, FL",
+"degree" : "BA", 
+"major" : "Biological Anthropology",
+"minor" : "Creative Writing",
+"url" : "http://www.usf.edu/"
+},
+
+{
+"name" : "Binghamton University",
+"startYear" : 2014,
+"endYear" : 2015,
+"city" : "Binghamton, NY",
+"degree" : "MS, MA/Ph.D", 
+"major" : "Biomedical Anthropology",
+"url" : "http://binghamton.edu/"
+}
+],
+
+"onlineCourses" : [
+	{
+		"title" : "Harvard's CS50x",
+		"school" : "Edx/Harvard",
+		"year" : "2015",
+		"url" : "https://www.edx.org/course/introduction-computer-science-harvardx-cs50x"
+	},
+
+	{
+		"title" : "Front-End NanoDegree",
+		"school" : "Udacity",
+		"year" : "2015-2016",
+		"url" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+	},
+
+	{
+		"title" : "Unity Tutorials",
+		"school" : "Unity",
+		"year" : "2016",
+		"url" : "https://unity3d.com/learn/tutorials"
+	}
+
+	]
+}
+
+var projects = {
+	"project" : [
+
+	{
+		"title" : "Questly",
+		"dates" : "2015-2016",
+		"descriptions" : "An augmetned reality start I pioneered. Queslty was intended to push gaming experiences to the next level. By using location based technology to generate an MMO style game, we sought to blur reality and the real world in new and interesting ways.",
+		"links" : ["https://github.com/Questlyap/questly-android-prototype"]
+	},
+
+	{
+		"title" : "Roll A Ball",
+		"dates" : "2016",
+		"descriptions" : "My first ever game crafted in Unity. My implementation added a few features, such as resetting, to the tutorial version.",
+		"links" : ["https://github.com/Jarory13/RollABall"]
+	},
+
+	{
+		"title" : "EpiQuick",
+		"dates" : "2016",
+		"descriptions" : "My first Android project. EpiQuick utilized information from the CDC to inform users about the most common infectious diseases.",
+		"links" : ["https://github.com/Jarory13/EpiQuick"]
+	}
+
+	]
+}
 
 
+
+/*
 //pass those values into a formattted verion.
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var imageURL = HTMLbioPic.replace("%data%", bio.biopic);
@@ -65,8 +176,10 @@ $("#header").append(formattedwelcome);
 $("#header").append(formattedlocation);
 
 //Work on the main body 
-$("#main").append(work[position]);
-$("#main").append(education.name);
+$("#main").append(work.current.position);
+$("#main").append(education.schools[0].name);
+*/
+
 
 
 

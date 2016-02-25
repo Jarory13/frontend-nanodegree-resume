@@ -10,7 +10,7 @@ var bio = {
 	"email": "Jarory13@gmail.com",
 	"phone": "813-440-9573",
 	"github": "www.github.com/Jarory13",
-	"location": "New York, NY / Tampa, FL",
+	"location": "Tampa, FL",
 	"linkedin": "http://bit.ly/1SXe370"
 	},
 	"biopic" : "http://bit.ly/1LxKYXH",
@@ -165,7 +165,7 @@ if ('skills' in bio && bio.skills.length > 0 ) {
 }
 
 //Get work into reusme
-
+function displaywork () {
 for(job in work.jobs) {
 	$("#workExperience").append(HTMLworkStart);
 
@@ -192,18 +192,37 @@ var formattedEmployTitle = newemploy + newtitle;
 	$(".work-entry:last").append(newdescription);
 }
 
+}
 
+displaywork();
 
+$(document).click(function(loc) {
+  // your code goes here
+  logClicks(loc.pageX, loc.pageY);
+});
 
+/*
 
+$("#main").append(internationalizeButton);
 
+function inName(name) {
+	name = name.trim().split(" ");
+	console.log(name);
+	var nameleng = name.length;
+	name[nameleng-1] = name[nameleng-1].toUpperCase();
+	name[0] = name[0].slice(0,1).toUpperCase() +
+	name[0].slice(1).toLowerCase();
 
+	var fullname = "";
 
+	for(var i = 0; i < nameleng; i++) {
+		fullname = fullname + name[i] + " ";
+	}
 
-
-
-
-
+	return fullname;
+	
+}
+*/
 
 
 /*

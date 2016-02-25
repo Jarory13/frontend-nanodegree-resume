@@ -15,26 +15,25 @@ var bio = {
 	},
 	"biopic" : "http://bit.ly/1LxKYXH",
 	"skills" : ["Web Development", "Android", "Java", "XML", "C++", 
-"C", "C#", "HTML/CSS", "PHP", "JaaScript", "Unity", "Copy Writing", 
-"WordPress", "Project Management", "Excel", "Word"],
+"C", "C#", "HTML/CSS", "PHP", "JavaScript", "Unity", "Copy Writing", 
+"WordPress", "Excel", "Project Management", ],
 	"welcome": "From ideas to development, I'm the guy you want on the job."
 
 };
 
 var work = {
-	"current" : {
+	"jobs" :[ {
 "position" :"Freelancer",
 "employer" : "Self",
-"years" : "1",
+"years" : "October 2015 - Current",
 "city" : "New York, NY/ Tampa, FL",
 "description" : "I currently freelance as a web and mobile developer."
 },
 	
-	"previous" :[
 {
-"position" : "Intern",
+"position" : "Epidemiology Intern",
 "employer" : "Florida Department of health",
-"years" : "0.25",
+"years" : "May 2015 - July 2015",
 "city" : "Tampa, FL",
 "description" : "Working with the DOH, I shadowed the team during epidemiological investigations and monitored potential ebola cases in Florida."
 },
@@ -42,15 +41,24 @@ var work = {
 {
 "position" : "Ethnographer",
 "employer" : "Smart Revenue",
-"years" : "3",
+"years" : "October 2012 - Octoer 2015",
 "city" : "Tampa, FL/ New York, NY",
 "description" : "As an Ethnographer I gathered data on consumers by observing them in client locations. I used survies and interviews to ascertain their purchasing logic and returned that data to our clients."
+},
+
+
+{
+"position" : "Graduate Assistant",
+"employer" : "Binghamton University",
+"years" : "August 2014 - May 2015",
+"city" : "Binghamton, NY",
+"description" : "I managed a team of 20 students, oversaw the booking and planning of events in the C4 MP Room, served as technical support for the A/V equipment, and managed a budget of $45,000."
 },
 
 {
 "position" : "Data Research Analyst",
 "employer" : "BayForce",
-"years" : "1",
+"years" : "December 2013 - July 2014",
 "city" : "Tampa, FL",
 "description" : "I worked in SalesForce to maintain our client records so that our sales time had the most up to date data."
 },
@@ -58,13 +66,11 @@ var work = {
 {
 "position" : "Course Developer",
 "employer" : "You Can Learn Inc.",
-"years" : "1",
+"years" : "November 2011 - October 2012",
 "city" : "Tampa, FL",
 "description" : "I researched and wrote the content for our educaitonal apps. Each assignment required that I do indepth research on subjects ranging from Greek Mythology to the History of Japan. I then wrote the content and quizzes for the app."
 }
-
-	]
-
+]
 }
 
 var education = {
@@ -143,18 +149,47 @@ var projects = {
 	]
 }
 
-
-if ('skills' in bio ) {
+//Get skills into resume. 
+if ('skills' in bio && bio.skills.length > 0 ) {
 	$("#header").append(HTMLskillsStart);
 
-	var skillswithspace = bio.skills.join(", ")
+	for(var i = 0; i < bio.skills.length; i++) {
 
-	var formattedskills = HTMLskills.replace("%data%", skillswithspace);
-	$("#header").append(formattedskills);
+		var formattedskills = HTMLskills.replace("%data%", 
+			bio.skills[i]);
+	$("#skills").append(formattedskills);
+	}
 	
-
 } else {
 	console.log("skills not found");
+}
+
+//Get work into reusme
+
+for(job in work.jobs) {
+	$("#workExperience").append(HTMLworkStart);
+
+	var newemploy = HTMLworkEmployer.replace("%data%",  
+		work.jobs[job].employer);
+
+	var newtitle = HTMLworkTitle.replace("%data%",  
+		work.jobs[job].position);
+
+	var newdates = HTMLworkDates.replace("%data%",  
+		work.jobs[job].years);
+
+	var newcity = HTMLworkLocation.replace("%data%",  
+		work.jobs[job].city);
+
+	var newdescription = HTMLworkDescription.replace("%data%",  
+		work.jobs[job].description);
+
+
+var formattedEmployTitle = newemploy + newtitle;
+	$(".work-entry:last").append(formattedEmployTitle);
+	$(".work-entry:last").append(newdates);
+	$(".work-entry:last").append(newcity);
+	$(".work-entry:last").append(newdescription);
 }
 
 

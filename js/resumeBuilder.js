@@ -144,6 +144,32 @@ var projects = {
 }
 
 
+if ('skills' in bio ) {
+	$("#header").append(HTMLskillsStart);
+
+	var skillswithspace = bio.skills.join(", ")
+
+	var formattedskills = HTMLskills.replace("%data%", skillswithspace);
+	$("#header").append(formattedskills);
+	
+
+} else {
+	console.log("skills not found");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 //pass those values into a formattted verion.
@@ -171,7 +197,7 @@ $("#header").append(formattedemail);
 $("#header").append(formatedphone);
 $("#header").append(formattedgit);
 $("#header").append(formattedlinked);
-$("#header").append(formattedskills);
+
 $("#header").append(formattedwelcome);
 $("#header").append(formattedlocation);
 

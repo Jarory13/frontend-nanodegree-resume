@@ -201,6 +201,7 @@ $(document).click(function(loc) {
   logClicks(loc.pageX, loc.pageY);
 });
 
+
 /*
 
 $("#main").append(internationalizeButton);

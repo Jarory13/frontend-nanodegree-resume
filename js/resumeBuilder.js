@@ -262,8 +262,7 @@ $(document).click(function(loc) {
   logClicks(loc.pageX, loc.pageY);
 });
 
-
-
+//$("#mapDiv").append(googleMap);
 
 
 

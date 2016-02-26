@@ -21,6 +21,7 @@ var bio = {
 
 };
 
+//object for all of work data. 
 var work = {
 	"jobs" :[ {
 "position" :"Freelancer",
@@ -73,6 +74,8 @@ var work = {
 ]
 }
 
+
+//object for previous educational experience. 
 var education = {
 	"schools" :[
 	{
@@ -122,6 +125,7 @@ var education = {
 	]
 }
 
+//objects for personal projects
 var projects = {
 	"project" : [
 
@@ -194,6 +198,7 @@ var formattedEmployTitle = newemploy + newtitle;
 
 }
 
+//add display function to projects object. 
 projects.display = function() {
 	for(gig in projects.project) {
 	$("#projects").append(HTMLprojectStart);
@@ -218,15 +223,49 @@ projects.display = function() {
 
 }
 
+education.display = function() {
+	for(school in education.schools) {
+	$("#education").append(HTMLschoolStart);
+
+	var schoolname = HTMLschoolName.replace("%data%",  
+		education.schools[school].name);
+
+	var schooldegree = HTMLschoolDegree.replace("%data%",  
+		education.schools[school].degree);
+
+	var schooldates = HTMLschoolDates.replace("%data%",  
+		education.schools[school].startYear + " - " + 
+		education.schools[school].endYear);
+
+	var schoollocation = HTMLschoolLocation.replace("%data%",  
+		education.schools[school].city);
+
+	var schoolmajor = HTMLschoolMajor.replace("%data%",  
+		education.schools[school].major);
+
+	$(".education-entry:last").append(schoolname);
+	$(".education-entry:last").append(schooldegree);
+	$(".education-entry:last").append(schooldates);
+	$(".education-entry:last").append(schoollocation);
+	$(".education-entry:last").append(schoolmajor);
+}
+}
+
 
 
 displaywork();
 
 projects.display();
+education.display();
 $(document).click(function(loc) {
   // your code goes here
   logClicks(loc.pageX, loc.pageY);
 });
+
+
+
+
+
 
 
 /*

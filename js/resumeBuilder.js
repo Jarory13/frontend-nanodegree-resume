@@ -128,22 +128,22 @@ var projects = {
 	{
 		"title" : "Questly",
 		"dates" : "2015-2016",
-		"descriptions" : "An augmetned reality start I pioneered. Queslty was intended to push gaming experiences to the next level. By using location based technology to generate an MMO style game, we sought to blur reality and the real world in new and interesting ways.",
-		"links" : ["https://github.com/Questlyap/questly-android-prototype"]
+		"description" : "An augmetned reality start up I pioneered. Queslty was intended to push gaming experiences to the next level. By using location based technology to generate an MMO style game, we sought to blur reality and the real world in new and interesting ways.",
+		"links" : ["https://pbs.twimg.com/media/CTZFxNlVEAADF0s.png"]
 	},
 
 	{
 		"title" : "Roll A Ball",
 		"dates" : "2016",
-		"descriptions" : "My first ever game crafted in Unity. My implementation added a few features, such as resetting, to the tutorial version.",
-		"links" : ["https://github.com/Jarory13/RollABall"]
+		"description" : "My first ever game crafted in Unity. My implementation added a few features, such as resetting, to the tutorial version.",
+		"links" : ["https://unity3d.com/sites/default/files/learn-playlist/icon/rollaball-thumb1.jpg"]
 	},
 
 	{
 		"title" : "EpiQuick",
 		"dates" : "2016",
-		"descriptions" : "My first Android project. EpiQuick utilized information from the CDC to inform users about the most common infectious diseases.",
-		"links" : ["https://github.com/Jarory13/EpiQuick"]
+		"description" : "My first Android project. EpiQuick utilized information from the CDC to inform users about the most common infectious diseases.",
+		"links" : ["https://raw.githubusercontent.com/Jarory13/EpiQuick/master/app/src/main/res/drawable/intro.jpg"]
 	}
 
 	]
@@ -194,8 +194,35 @@ var formattedEmployTitle = newemploy + newtitle;
 
 }
 
+projects.display = function() {
+	for(gig in projects.project) {
+	$("#projects").append(HTMLprojectStart);
+
+	var projectTitles = HTMLprojectTitle.replace("%data%",  
+		projects.project[gig].title);
+
+	var projectDates = HTMLprojectDates.replace("%data%",  
+		projects.project[gig].dates);
+
+	var projectDescription = HTMLprojectDescription.replace("%data%",  
+		projects.project[gig].description);
+
+	var projectImages = HTMLprojectImage.replace("%data%",  
+		projects.project[gig].links);
+
+	$(".project-entry:last").append(projectTitles);
+	$(".project-entry:last").append(projectDates);
+	$(".project-entry:last").append(projectDescription);
+	$(".project-entry:last").append(projectImages);
+}
+
+}
+
+
+
 displaywork();
 
+projects.display();
 $(document).click(function(loc) {
   // your code goes here
   logClicks(loc.pageX, loc.pageY);

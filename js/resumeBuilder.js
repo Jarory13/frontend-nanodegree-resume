@@ -291,7 +291,7 @@ function inName(name) {
 */
 
 
-/*
+
 //pass those values into a formattted verion.
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 var imageURL = HTMLbioPic.replace("%data%", bio.biopic);
@@ -304,9 +304,9 @@ var formattedlocation = HTMLlocation.replace("%data%", bio.contact.location);
 var formattedlinked = HTMLlinkedin.replace("%data%", bio.contact.linkedin);
 
 
-var skillswithspace = bio.skills.join(", ")
+// var skillswithspace = bio.skills.join(", ")
 
-var formattedskills = HTMLskills.replace("%data%", skillswithspace);
+// var formattedskills = HTMLskills.replace("%data%", skillswithspace);
 
 
 //append or prepend them to the header. 
@@ -322,9 +322,9 @@ $("#header").append(formattedwelcome);
 $("#header").append(formattedlocation);
 
 //Work on the main body 
-$("#main").append(work.current.position);
-$("#main").append(education.schools[0].name);
-*/
+// $("#main").append(work.current.position);
+// $("#main").append(education.schools[0].name);
+// */
 
 
 

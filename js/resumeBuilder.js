@@ -27,7 +27,7 @@ var work = {
 "position" :"Freelancer",
 "employer" : "Self",
 "years" : "October 2015 - Current",
-"city" : "New York, NY/ Tampa, FL",
+"city" : "Tampa, FL",
 "description" : "I currently freelance as a web and mobile developer."
 },
 	
@@ -43,7 +43,7 @@ var work = {
 "position" : "Ethnographer",
 "employer" : "Smart Revenue",
 "years" : "October 2012 - Octoer 2015",
-"city" : "Tampa, FL/ New York, NY",
+"city" : "New York, NY",
 "description" : "As an Ethnographer I gathered data on consumers by observing them in client locations. I used survies and interviews to ascertain their purchasing logic and returned that data to our clients."
 },
 

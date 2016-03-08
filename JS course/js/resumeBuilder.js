@@ -5,7 +5,7 @@ This is empty on purpose! Your code to build the resume will go here.
 //Define the basic values for a header bio.
 var bio = {
 	"name" : "E. Jarory de Jesus",
-	"role": "Web Developer, Android Developer, Copy Writer, and Project Manager", 
+	"role": "Web and Android Developer, Anthropologist Copy Writer, and Project Manager", 
 	"contact": {
 	"email": "Jarory13@gmail.com",
 	"phone": "813-440-9573",
@@ -17,7 +17,7 @@ var bio = {
 	"skills" : ["Web Development", "Android", "Java", "XML", "C++", 
 "C", "C#", "HTML/CSS", "PHP", "JavaScript", "Unity", "Copy Writing", 
 "WordPress", "Excel", "Project Management", ],
-	"welcome": "From ideas to development, I'm the guy you want on the job."
+	"welcome": "Creative, efficient, and people-oriented Jack of All Trades"
 
 };
 
